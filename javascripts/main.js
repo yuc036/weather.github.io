@@ -1,8 +1,8 @@
 function apiCallZip(zipcode){
   var response;
-  // var url = 'http://samples.openweathermap.org/data/2.5/weather?zip='+zipcode+',us&appid=d855ef6b7b39ca226ad1946b488de93d';
-  var url = 'http://api.apixu.com/v1/forecast.json?key=37b4a164cd6c474b8c2170127170109&q=' + zipcode + '&days=7';
-  // http://api.apixu.com/v1/forecast.json?key=37b4a164cd6c474b8c2170127170109&q=94536&days=7
+  // var url = 'https://samples.openweathermap.org/data/2.5/weather?zip='+zipcode+',us&appid=d855ef6b7b39ca226ad1946b488de93d';
+  var url = 'https://api.apixu.com/v1/forecast.json?key=37b4a164cd6c474b8c2170127170109&q=' + zipcode + '&days=7';
+  // https://api.apixu.com/v1/forecast.json?key=37b4a164cd6c474b8c2170127170109&q=94536&days=7
   console.log(url);
 
   $.ajax({
@@ -34,7 +34,7 @@ function apiCallZip(zipcode){
 function apiCallName(name){
   var response;
 
-  var url = 'http://api.apixu.com/v1/current.json?key=37b4a164cd6c474b8c2170127170109&q=' + name;
+  var url = 'https://api.apixu.com/v1/current.json?key=37b4a164cd6c474b8c2170127170109&q=' + name;
 
   console.log(url);
 
