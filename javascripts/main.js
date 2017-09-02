@@ -13,6 +13,7 @@ function apiCallZip(zipcode){
     // console.log(response);
     $('#name').html("City: " + response.location.name + ", " + response.location.region + ", " + response.location.country);
     $('#current').html("Current Weather: ");
+    $('#weather-temp').html("Temperature: " + response.current.temp_c + "℃");
     $('#weather-text').html("Weather: " + response.current.condition.text);
     var icon = "https:" + response.current.condition.icon;
     $('#weather-icon').html("<img src='" + icon + "'>");
@@ -22,6 +23,7 @@ function apiCallZip(zipcode){
     $('#forecast').html("Weather Forecast: ");
     $('#day1').html("Day 1: ");
     $('#weather-forecast-1-date').html("Weather: " + response.forecast.forecastday[0].date);
+    $('#weather-forecast-1-temp').html("Temperature: " + response.forecast.forecastday[0].day.avgtemp_c + "℃");
     $('#weather-forecast-1-text').html("Weather: " + response.forecast.forecastday[0].hour[0].condition.text);
     var icon = "https:" + response.forecast.forecastday[0].hour[0].condition.icon;
     $('#weather-forecast-1-icon').html("<img src='" + icon + "'>");
@@ -46,6 +48,7 @@ function apiCallName(name){
     // console.log(response);
     $('#name').html("City: " + response.location.name + ", " + response.location.region + ", " + response.location.country);
     $('#current').html("Current Weather: ");
+    $('#weather-temp').html("Temperature: " + response.current.temp_c + "℃");
     $('#weather-text').html("Weather: " + response.current.condition.text);
     var icon = "https:" + response.current.condition.icon;
     $('#weather-icon').html("<img src='" + icon + "'>");
@@ -60,6 +63,7 @@ function clear() {
   $('#zip').html("");
   $('#name').html("");
   $('#current').html("");
+  $('#weather-temp').html("");
   $('#weather-text').html("");
   $('#weather-icon').html("");
   $('#wind-speed').html("");
@@ -67,6 +71,7 @@ function clear() {
   $('#forecast').html("");
   $('#day1').html("");
   $('#weather-forecast-1-date').html("");
+  $('#weather-forecast-1-temp').html("");
   $('#weather-forecast-1-text').html("");
   $('#weather-forecast-1-icon').html("");
   $('#wind-forecast-1-speed').html("");
