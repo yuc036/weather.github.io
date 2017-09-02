@@ -26,11 +26,7 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yuc036/weather.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+You can access your website at [https://yuc036.github.io/weather.github.io/#](https://yuc036.github.io/weather.github.io/?#).
 
 ### Support or Contact
 
