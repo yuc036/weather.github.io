@@ -78,7 +78,6 @@ $(function() {
   // console.log("document ready");
   // submit();
 
-/*
   $("#search-zip").click(function() {
     var zipcode = $('#zipcode').val();
     if (zipcode.length == 5 || zipcode.length == 6) {
@@ -95,7 +94,7 @@ $(function() {
       return false;
     }
   });
-*/
+
     $("#searchC").click(function() {
       var name = $('#city-name').val();
       console.log(name);
