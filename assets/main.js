@@ -58,6 +58,24 @@ function apiCallName(name){
 
 };
 
+/*
+function apiZip(lat, long) {
+  var response;
+
+  var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ','+ long + '&key=AIzaSyCRIOl9kHuudK_5JBFPOMZyDGcnlnhswpw';
+  // var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCRIOl9kHuudK_5JBFPOMZyDGcnlnhswpw';
+
+  $.ajax({
+      url: url
+  }).then(function(data) {
+    response = JSON.stringify(data);
+    response = JSON.parse(response);
+
+    var zipcode = response.results[0].address_components[7].long_name;
+    apiCallZip(zipcode);
+  });
+}
+*/
 
 function clear() {
   $('#zip').html("");
@@ -100,19 +118,53 @@ $(function() {
     }
   });
 
-    $("#searchC").click(function() {
-      var name = $('#city-name').val();
-      console.log(name);
-      clear();
-      apiCallName(name);
-    });
+  $("#searchC").click(function() {
+    var name = $('#city-name').val();
+    console.log(name);
+    clear();
+    apiCallName(name);
+  });
 
 
-    $("#city-name").keypress(function (e) {
-      if(e.which == 13) {
-        $("#searchC").click();
-        return false;
+  $("#city-name").keypress(function (e) {
+    if(e.which == 13) {
+      $("#searchC").click();
+      return false;
+    }
+  });
+
+  $("#locate-me").click(function() {
+    // clear();
+    /*
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition( function(position) {
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
       }
-    });
+    }
+
+    apiZip(lat, long);
+    */
+
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition( function(position) {
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
+        var point = new google.maps.LatLng(lat, long);
+        new google.maps.Geocoder().geocode(
+            {'latLng': point},
+            function(res, status) {
+              var zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
+              //$("#locate-me").val(zip[1]);
+              var zipcode = zip[1];
+              $('#zip').html("Zip Code: " + zipcode);
+              apiCallZip(zipcode);
+            }
+        );
+      });
+    }
+
+
+  });
 
 });
