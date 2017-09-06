@@ -11,7 +11,6 @@
 
     <script src="assets/main.js"></script>
 
-    <link rel="stylesheet" href="assets/style.css"/>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,35 +18,16 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="assets/style.css"/>
+
   </head>
-
-  <style>
-    .special {
-      color: blue;
-    }
-
-    body{
-      height: 100%;
-    }
-
-    .bottom {
-      position: relative;
-      margin-top: 500px;
-      height: 150px;
-      clear: both;
-    }
-    .footer {
-      position: relative;
-      margin-top: -165px;
-      height: 150px;
-      clear: both;
-    }
-  </style>
 
   <body>
 
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
+      <div class="container-fluid col-sm-12">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -56,25 +36,27 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Weather</a>
+          <a class="navbar-brand" href="#"><i class="material-icons big">cloud</i></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Maps</a></li>
-            <li><a href="#">Countries</a></li>
+            <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">MAPS</a></li>
+            <li><a href="#">COUNTRIES</a></li>
           </ul>
+
           <form class="navbar-form navbar-left">
             <div class="form-group">
               <input type="text" class="form-control" id="city-name" placeholder="City Name">
             </div>
             <button type="submit" class="btn btn-default" id="searchC">Search</button>
           </form>
+
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact Us</a></li>
@@ -86,9 +68,10 @@
     </nav>
 
     <div class="container">
-      <div class="span12">
+      <div class="input-field col s12">
         <header>
-          <h1>Weather</h1>
+          <h1><i class="material-icons">cloud</i><b> Weather</b></h1>
+          <br>
         </header>
 
         <div id="weathers">
@@ -100,9 +83,9 @@
             <div id="weather-temp"></div>
             <div id="weather-text"></div>
             <div id="weather-icon"></div>
-            <br>
             <div id="wind-speed"></div>
             <div id="wind-degree"></div>
+            <br>
           </p>
 
           <p>
@@ -113,7 +96,6 @@
               <div id="weather-forecast-1-temp"></div>
               <div id="weather-forecast-1-text"></div>
               <div id="weather-forecast-1-icon"></div>
-              <br>
               <div id="wind-forecast-1-speed"></div>
               <div id="wind-forecast-1-degree"></div>
             </p>
@@ -121,7 +103,7 @@
 
         </div>
 
-        <h4>Entering the Zip Code: </h4>
+        <h4><i>Entering the Zip Code: </i></h4>
 
         <p>
           Zip Code: <input type="number" maxlength="6" id="zipcode">

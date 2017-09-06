@@ -1,14 +1,43 @@
 body {
-  font-family: "helvetica neue";
+  font-family: "Chalkboard";
   color: #666;
   padding: 0 20%;
+  height: 100%;
 }
-li input {
-  display: none;
+
+.navbar {
+  font-family: "Arial Rounded MT Bold";
 }
-li.edit span {
-  display: none;
+
+.btn {
+  font-family: "Helvetica Neue";
 }
-li.edit input {
-  display: initial;
+
+.special {
+  color: blue;
+}
+
+.bottom {
+  position: relative;
+  margin-top: 500px;
+  height: 150px;
+  clear: both;
+}
+
+.footer {
+  position: relative;
+  margin-top: -165px;
+  height: 150px;
+  clear: both;
+}
+
+.material-icons {
+  font-size: 30px;
+  color: lightblue;
+  text-shadow:1px 1px 2px #000000;
+}
+
+.big {
+  font-size: 25px;
+  color: #666;
 }
