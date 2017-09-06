@@ -26,7 +26,7 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-You can access your website at [https://yuc036.github.io/weather.github.io/#](https://yuc036.github.io/weather.github.io/?#).
+You can access your website at [https://yuc036.github.io/weather.github.io/](https://yuc036.github.io/weather.github.io/).
 
 ### Support or Contact
 
